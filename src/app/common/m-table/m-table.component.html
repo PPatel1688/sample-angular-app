@@ -1,0 +1,9 @@
+<div class="table-responsive">
+    <table [attr.id]="id" mat-table matSort [dataSource]="dataSource" [matSortActive]="sort.active" [matSortDirection]="sort.direction" (matSortChange)="onSortChange($event)">
+        <ng-container *ngFor="let column of columns" matColumnDef="{{ column.field }}">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header [ngStyle]="isColStyle(column)" [disabled]="isColSortable(column)">{{ column.title }}</th>
+            <td mat-cell *matCellDef="let row" [ngStyle]="isColStyle(column)">
+            </td>
+        </ng-container>
+    </table>
+</div>
