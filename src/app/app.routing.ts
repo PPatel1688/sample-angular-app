@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { ActivatedRouteSnapshot, RouterModule, RouterStateSnapshot, Routes } from '@angular/router';
 
+/* shared module */
+import { AppPlugin } from './shared/app.plugin';
+
 import { LoginGuard, LayoutGuard  } from './auth/auth.guard';
 
 import { LoginComponent } from './components/login/login.component';
@@ -38,7 +41,7 @@ const routes: Routes = [
     LayoutComponent,
     DashboardComponent
   ],
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), AppPlugin],
   exports: [RouterModule]
 })
 export class AppRouting { }

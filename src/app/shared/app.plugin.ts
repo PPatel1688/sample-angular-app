@@ -29,6 +29,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatListModule } from '@angular/material/list';
 
+import { ButtonModule } from 'primeng/button';
 /* common directive */
 
 /* common controls */
@@ -64,7 +65,9 @@ import { MTableComponent } from '../common/m-table/m-table.component';
     MatExpansionModule,
     MatSlideToggleModule,
     MatTabsModule,
-    MatListModule
+    MatListModule,
+
+    ButtonModule
   ],
   exports: [
     CommonModule,
@@ -94,6 +97,8 @@ import { MTableComponent } from '../common/m-table/m-table.component';
     MatSlideToggleModule,
     MatTabsModule,
     MatListModule,
+
+    ButtonModule,
 
     MTableComponent
   ]
